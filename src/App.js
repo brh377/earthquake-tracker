@@ -10,8 +10,8 @@ function App() {
     const fetchEvents = async () =>{
       setLoading(true)
       let today = new Date();
-      let end = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-      let start = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+(today.getDate()-1);
+      let end = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'T'+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+      let start = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+(today.getDate()-1)+'T'+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
       const res = await fetch(`https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${start}&endtime=${end}`)
       const features = await res.json()
 
