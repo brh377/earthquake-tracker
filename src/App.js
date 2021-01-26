@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react';
 import Map from './components/Map';
 import Loader from './components/Loader';
+import Header from './components/Header';
 
 function App() {
   const [eventData, setEventData] = useState([]);
@@ -12,7 +13,8 @@ function App() {
       let today = new Date();
       let end = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'T'+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
       let start = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+(today.getDate()-1)+'T'+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
-      const res = await fetch(`https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${start}&endtime=${end}`)
+      
+      const res = await fetch(`${process.env.REACT_APP_USGS_KEY}${start}&endtime=${end}`)
       const features = await res.json()
 
       setEventData(features.features)
@@ -25,6 +27,7 @@ function App() {
 
   return (
     <div>
+      <Header/>
       {!loading && eventData ? <Map eventData={eventData}/> : <Loader/>}
     </div>
   );

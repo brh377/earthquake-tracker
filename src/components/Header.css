@@ -1,0 +1,23 @@
+.header{
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid silver ;
+    background: linear-gradient(rgba(0,0,0,1.0),rgba(0,0,0,.7));
+    justify-content: space-between;
+    z-index: 5;
+    
+}
+.header h2{
+    margin: 0 15px;
+    color: white;
+    letter-spacing: 2px;
+}
+.header img{
+    border-radius: 20px 20px 20px 20px;
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+}
