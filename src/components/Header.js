@@ -7,7 +7,6 @@ const Header= ()=>{
         <div className="header">
             <img src={icon} alt="earthquake icon"/>
             <h2>Earthquake Tracker</h2>
-            <Dropdown/>
         </div>
         
     )
