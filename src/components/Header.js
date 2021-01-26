@@ -1,6 +1,5 @@
 import React from 'react';
 import icon from '../images/icon.png';
-import Dropdown from './Dropdown';
 import './Header.css'
 
 const Header= ()=>{
