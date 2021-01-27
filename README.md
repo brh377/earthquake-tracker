@@ -1,6 +1,6 @@
 # Earthquake Tracker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Earthquake Tracker is an application will display every earthquake detected within the past 24 hours using USGS(United States Geological Survey) GeoJson data and Google Maps.
 
 ## [Live Site](https://earthshaker.netlify.app/)
 
