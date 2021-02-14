@@ -17,6 +17,8 @@ body {
 .loader h1{
   margin-top: -100px;
 }
+
+
 /*Info Box*/
 .location-info{
   position: absolute;
@@ -25,14 +27,20 @@ body {
   width: 400px;
   min-height: 200px;
   padding: 20px;
-  background-color: rgba(165, 126, 47,.7);
-  color: white;
+  background: rgba(4, 97, 39, 0.294);
+  backdrop-filter: blur(10px);
+  color: black;
   border-radius: 10px;
   font-size: 18px;
+  margin-top: 2%;
+}
+.location-info h2{
+  font-weight: 700;
 }
 .location-info ul{
   list-style: none;
   padding: 0;
+  font-weight: 600;
 }
 .location-info li{
   padding: 5px 0;
