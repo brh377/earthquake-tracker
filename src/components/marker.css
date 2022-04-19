@@ -7,6 +7,7 @@
 }
 .marker img{
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	cursor: pointer;
     border-radius: 50%;
 	transform: scale(1);
 	animation: pulse 2s infinite;
