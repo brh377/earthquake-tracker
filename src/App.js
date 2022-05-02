@@ -6,6 +6,7 @@ import Header from './components/Header';
 function App() {
   const [eventData, setEventData] = useState([]);
   const [loading, setLoading] = useState([]);
+  const [query, setQuery] = useState(null);
 
   useEffect(()=>{
     const fetchEvents = async () =>{
