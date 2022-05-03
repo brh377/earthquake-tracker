@@ -6,12 +6,16 @@ import Header from './components/Header';
 function App() {
   const [eventData, setEventData] = useState([]);
   const [loading, setLoading] = useState([]);
-  const [query, setQuery] = useState(null);
+  const [query, setQuery] = useState([]);
 
   useEffect(()=>{
     const fetchEvents = async () =>{
-      setLoading(true)
       let today = new Date();
+//       if query{
+        
+//       }
+      setLoading(true)
+      
       let end = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'T'+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
       let start = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+(today.getDate()-1)+'T'+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
       
@@ -24,11 +28,11 @@ function App() {
       
     }
     fetchEvents()
-  },[])
+  },[query])
 
   return (
     <div>
-      <Header/>
+      <Header query = {setQuery}/>
       {!loading && eventData ? <Map eventData={eventData}/> : <Loader/>}
     </div>
   );
