@@ -1,6 +1,10 @@
 import React from 'react';
 import icon from '../images/icon.png';
-import './Header.css'
+import './Header.css';
+import useState from 'react';
+
+[time,setTime] = useState([]);
+[magnitude,setMagnitude] = useState([]);
 
 const Header= ({setQuery})=>{
     return(
