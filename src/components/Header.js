@@ -2,7 +2,7 @@ import React from 'react';
 import icon from '../images/icon.png';
 import './Header.css'
 
-const Header= ()=>{
+const Header= ({setQuery})=>{
     return(
         <div className="header">
             <img src={icon} alt="earthquake icon"/>
