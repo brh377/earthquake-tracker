@@ -11,9 +11,9 @@ function App() {
   useEffect(()=>{
     const fetchEvents = async () =>{
       let today = new Date();
-//       if query{
-        
-//       }
+      if (query){
+
+      }
       setLoading(true)
       
       let end = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()+'T'+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <Header query = {setQuery}/>
+      <Header query={setQuery}/>
       {!loading && eventData ? <Map eventData={eventData}/> : <Loader/>}
     </div>
   );
