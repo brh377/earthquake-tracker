@@ -18,13 +18,10 @@ const Header= ({setQuery})=>{
                     Dropdown Button
                 </Dropdown.Toggle>
                 <Dropdown.Menu onSelect={(e)=>{setQuery(e.value);console.log(e.value)}}>
-                    <Dropdown.Item>2.5 or less</Dropdown.Item>
-                    <Dropdown.Item>2.5 to 5.4</Dropdown.Item>
-                    <Dropdown.Item>5.5 to 6.0</Dropdown.Item>
-                    <Dropdown.Item>5.5 to 6.0</Dropdown.Item>
-                    <Dropdown.Item>6.1 to 6.9</Dropdown.Item>
-                    <Dropdown.Item>7.0 to 7.9</Dropdown.Item>
-                    <Dropdown.Item>8.0 or greater</Dropdown.Item>
+                    <Dropdown.Item evenkKey = '[0,2.5]'>2.5 or less</Dropdown.Item>
+                    <Dropdown.Item evenkKey = '[2.5,5.4]'>2.5 to 5.4</Dropdown.Item>
+                    <Dropdown.Item evenkKey = '[5.5,7.5]'>5.5 to 6.0</Dropdown.Item>
+                    <Dropdown.Item evenkKey = '[7.5,10]'>5.5 to 6.0</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </div>
